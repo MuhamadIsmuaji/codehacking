@@ -2,6 +2,13 @@
 
 @section('content')
 	<h1>Users</h1>
+
+	@if(Session::has('deleted_user')) 
+		<div>
+			{{session('deleted_user')}}
+		</div>
+	@endif
+
 	<div>
 		<a href="{{route('users.create')}}">Create Users</a>
 	</div>

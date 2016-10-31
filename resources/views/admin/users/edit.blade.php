@@ -11,6 +11,12 @@
 		@endif
 	</div>
 
+	<div>
+		{!! Form::open(['method' => 'DELETE', 'action' => ['AdminUsersController@destroy', $user->id]]) !!}
+			{!! Form::submit('Delete User', []) !!}
+		{!! Form::close() !!}
+	</div>
+
 	<table>
 		{!! Form::model($user,['action' => ['AdminUsersController@update', $user->id], 'method' => 'PATCH', 'files' => true]) !!}
 		<tbody>
