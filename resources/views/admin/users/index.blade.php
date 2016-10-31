@@ -9,6 +9,7 @@
 		<thead>
 			<tr>
 				<th>ID</th>
+				<th>Photo</th>
 				<th>Name</th>
 				<th>Email</th>
 				<th>Role</th>
@@ -22,7 +23,18 @@
 			@foreach($users as $user)
 				<tr>
 					<td>{{$user->id}}</td>
-					<td>{{$user->name}}</td>
+					<td>
+
+						@if($user->photo)
+							<img height="100px" src="{{$user->photo->file}}">
+						@else
+							No User Photo
+						@endif
+
+					</td>
+					<td>
+						<a href="{{route('users.edit', $user->id)}}">{{$user->name}}</a>
+					</td>
 					<td>{{$user->email}}</td>
 					<td>{{$user->role->name}}</td>
 					<td>{{$user->is_active}}</td>
