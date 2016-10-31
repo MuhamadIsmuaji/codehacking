@@ -2,6 +2,9 @@
 
 @section('content')
 	<h1>Users</h1>
+	<div>
+		<a href="{{route('users.create')}}">Create Users</a>
+	</div>
 	<table border="1" cellspacing="0" cellpadding="10">
 		<thead>
 			<tr>

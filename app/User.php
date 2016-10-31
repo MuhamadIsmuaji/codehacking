@@ -31,7 +31,15 @@ class User extends Authenticatable
         return $this->belongsTo('App\Role');
     }
 
+    public function photo() {
+        return $this->belongsTo('App\Photo');
+    }
+
     public function getIsActiveAttribute($value) {
         return $value ? 'Active' : 'Not Active';
+    }
+
+    public function setPasswordAttribute($value) {
+        return $this->attributes['password'] = bcrypt($value);
     }
 }

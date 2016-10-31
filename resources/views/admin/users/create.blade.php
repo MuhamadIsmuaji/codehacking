@@ -27,8 +27,8 @@
 				<td>{!! Form::password('password', null, []) !!}</td>
 			</tr>
 			<tr>
-				<td>{!! Form::label('file', 'Picture : ', []) !!}</td>
-				<td>{!! Form::file('file', []) !!}</td>
+				<td>{!! Form::label('photo_id', 'Picture : ', []) !!}</td>
+				<td>{!! Form::file('photo_id', []) !!}</td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center">
